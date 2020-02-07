@@ -8,39 +8,60 @@
 </ion-header>
 
 <ion-content>
+  <div class="form">
+    <h1>O'qituvchi qo'shish</h1>
+    <form #signupForm="ngForm" novalidate>
+      <ion-list lines="none">
+        <div class="block">
+          <p>O'qituvchining rasmi</p>
+          <div class="photo">
+            <div class="outline">
+              <div class="round">
+                <img class="upload" src="assets/img/upload.ico"/>
+              </div>
+            </div>
+            <p>Rasmni tanlang</p>
+          </div>
+        </div>
+        <div class="inputs">
+          <ion-item>
+            <ion-label position="floating" >Ism</ion-label>
+            <ion-input [(ngModel)]="signup.name" name="name" type="text" #name="ngModel">
+            </ion-input>
+          </ion-item>
+          <span>O'qituvchining ismini kiriting</span>
 
-  <div class="signup-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+          <ion-item>
+            <ion-label position="floating">Telefon raqam</ion-label>
+            <ion-input [(ngModel)]="signup.phone" name="phone" type="phone" #phone="ngModel">
+            </ion-input>
+          </ion-item>
+          <span>O'qituvchining telefon raqamini kiriting</span>
+
+          <ion-item>
+            <ion-label position="floating" >Fanlar</ion-label>
+            <ion-input [(ngModel)]="signup.subject" name="subject" type="text" #subject="ngModel">
+            </ion-input>
+          </ion-item>
+          <span>O'qituvchining o'tadigan fanlarni kiriting</span>
+
+          <ion-item class="item">
+            <ion-label position="floating">Holati</ion-label>
+            <ion-select [(ngModel)]="signup.condition" name="condition" #condition="ngModel">
+              <ion-select-option value="a">Aktiv</ion-select-option>
+              <ion-select-option value="p">Muzlatilgan</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <span>O'qituvchining holatini tanlang</span>
+          
+        </div> 
+      </ion-list>
+
+      <div class="ion-padding">
+        <button type="reset" class="buttonreset">Bekor qilish</button>
+        <button (click)="onSignup(signupForm)" type="submit" class="buttonsubmit">Qo'shish</button>
+      </div>
+    </form>
   </div>
-
-  <form #signupForm="ngForm" novalidate>
-    <ion-list lines="none">
-      <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
-          Username is required
-        </p>
-      </ion-text>
-
-      <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
-          Password is required
-        </p>
-      </ion-text>
-    </ion-list>
-
-    <div class="ion-padding">
-      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block">Create</ion-button>
-    </div>
-  </form>
 
 </ion-content>

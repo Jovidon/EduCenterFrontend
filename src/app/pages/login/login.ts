@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./login.scss'],
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserOptions = { name: '', phone: '', subject: '', condition: ''};
   submitted = false;
 
   constructor(
@@ -26,7 +26,7 @@ export class LoginPage {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.login(this.login.username);
+      this.userData.login(this.login.name);
       this.router.navigateByUrl('/app/tabs/schedule');
     }
   }
