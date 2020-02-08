@@ -20,24 +20,39 @@ import { UserData } from './providers/user-data';
 export class AppComponent implements OnInit {
   appPages = [
     {
-      title: 'Schedule',
-      url: '/app/tabs/schedule',
+      title: 'Umumiy hisobot',
+      url: '/report',
+      icon: 'trending-up'
+    },
+    {
+      title: 'O\'quvchilar',
+      url: '/students',
+      icon: 'person'
+    },
+    {
+      title: 'Guruhlar',
+      url: '/groups',
+      icon: 'people'
+    },
+    {
+      title: 'Jadval',
+      url: '/schedule',
       icon: 'calendar'
     },
     {
       title: 'Speakers',
-      url: '/app/tabs/speakers',
+      url: '/speakers',
       icon: 'contacts'
     },
     {
-      title: 'Map',
-      url: '/app/tabs/map',
-      icon: 'map'
+      title: 'Menu profile',
+      url: '/profile',
+      icon: 'contact'
     },
     {
-      title: 'About',
-      url: '/app/tabs/about',
-      icon: 'information-circle'
+      title: 'SignUp',
+      url: '/signup',
+      icon: 'person-add'
     }
   ];
   loggedIn = false;
@@ -117,9 +132,9 @@ export class AppComponent implements OnInit {
     });
   }
 
-  openTutorial() {
-    this.menu.enable(false);
-    this.storage.set('ion_did_tutorial', false);
-    this.router.navigateByUrl('/tutorial');
-  }
+  // openTutorial() {
+  //   this.menu.enable(false);
+  //   this.storage.set('ion_did_tutorial', false);
+  //   this.router.navigateByUrl('/tutorial');
+  // }
 }
