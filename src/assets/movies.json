@@ -1,0 +1,125 @@
+{
+    "movies": [
+        {
+            "id":  "1",
+            "ism": "Escape Room",
+            "guruh": "Columbia Pictures",
+            "tel": "939999047",
+            "guruhlar": "1",
+            "vaqti": "Yanvar 25, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+
+        },
+        {
+            "id":  "2",
+            "ism": "Rust Creek",
+            "guruh": "IFC Films",
+            "tel": "995426855",
+            "guruhlar": "2",
+            "vaqti": "Yanvar 30, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "3",
+            "ism": "American Hangman",
+            "guruh": "Hangman Productions",
+            "tel": "96582243",
+            "guruhlar": "1",
+            "vaqti": "Fevral 2, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "4",
+            "ism": "The Upside",
+            "guruh": "STX Entertainment",
+            "tel": "99999999",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "5",
+            "ism": "Replicas",
+            "guruh": "Entertainment Studios",
+            "tel": "9999999999",
+            "guruhlar": "2",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "6",
+            "ism": "After Darkness",
+            "guruh": "Grindstone Group",
+            "tel": "222222222",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "7",
+            "ism": "Glass",
+            "guruh": "Universal Pictures",
+            "tel": "1111111111",
+            "guruhlar": "3",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "8",
+            "ism": "Close",
+            "guruh": "Netflix",
+            "tel": "55555555",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "9",
+            "ism": "The Final Wish",
+            "guruh": "BondIt Capital",
+            "tel": "Horror",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "10",
+            "ism": "Serenity",
+            "guruh": "Aviron Pictures",
+            "tel": "Drama",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "11",
+            "ism": "Miss Bala",
+            "guruh": "Columbia Pictures",
+            "tel": "Thriller",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        },
+        {
+            "id":  "12",
+            "ism": "Velvet Buzzsaw",
+            "guruh": "Netflix",
+            "tel": "Comedy",
+            "guruhlar": "1",
+            "vaqti": "Mart 20, 2020",
+            "holati": "aktiv",
+            "balance": "100 000 so'm"
+        }
+    ]
+}
