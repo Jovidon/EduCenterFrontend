@@ -4,6 +4,82 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
 
+  <ion-row class="ion-align-items-stretch">
+    <ion-col size="12" size-md="6">
+      <ion-button type=button>
+        Guruh qo'shish
+      </ion-button>
+    </ion-col>
+    <ion-col size="12" size-md="6">
+      <ion-searchbar placeholder="ism bo'yicha qidirish"></ion-searchbar>
+    </ion-col>
+  </ion-row>
+  <div class="ion-padding">
+
+    <!-- Theme classes dark, material, bootstrap -->
+    <ngx-datatable 
+      class="material"
+      [limit]="8" 
+      [rows]="rows" 
+      [rowHeight]="50" 
+      [columns]="columns"
+      [columnMode]="'force'" 
+      [sortType]="'multi'" 
+      [headerHeight]="50" 
+      [footerHeight]="50">
+       <ngx-datatable-column name="Id">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>#</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="ism">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Guruh name</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="holati">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Holati</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="ism">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Fan nomi</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="Guruhlar">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Ta'lim shakli</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="balance">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>To'lov miqdori</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="guruh">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>O'qituvchi</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="Action" sortable="false">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span></span>
+        </ng-template>
+        <ng-template let-col="row" let-value="value" ngx-datatable-cell-template>
+          <ion-button fill="clear" size="small" color="primary" (click)="open(row)">
+            <ion-icon name="create" slot="start"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" size="small" color="primary" (click)="open(row)">
+            <ion-icon name="close" slot="start"></ion-icon>
+          </ion-button>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+    
+
+  </div>
 </ion-content>

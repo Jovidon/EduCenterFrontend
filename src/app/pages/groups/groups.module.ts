@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { GroupsPageRoutingModule } from './groups-routing.module';
 
 import { GroupsPage } from './groups.page';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GroupsPageRoutingModule
+    GroupsPageRoutingModule,
+    NgxDatatableModule
   ],
   declarations: [GroupsPage]
 })
