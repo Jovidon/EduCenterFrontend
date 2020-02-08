@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./signup.scss'],
 })
 export class SignupPage {
-  signup: UserOptions = { username: '', password: '' };
+  signup: UserOptions = { name: '', phone: '', subject: '', condition: ''};
   submitted = false;
 
   constructor(
@@ -26,7 +26,7 @@ export class SignupPage {
     this.submitted = true;
 
     if (form.valid) {
-      this.userData.signup(this.signup.username);
+      this.userData.signup(this.signup.name);
       this.router.navigateByUrl('/app/tabs/schedule');
     }
   }

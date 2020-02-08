@@ -1,13 +1,132 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
 .signup-logo {
   padding: 20px 0;
   min-height: 200px;
   text-align: center;
 }
 
-.signup-logo img {
-  max-width: 150px;
+.ion-padding {
+  text-align: center;
 }
 
-.list {
-  margin-bottom: 0;
+// .signup-logo img {
+//   max-width: 150px;
+// }
+
+// .list {
+//   margin-bottom: 0;
+// }
+
+form {
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+// -------------------------- form shape ------------------------
+.form {
+  width: 100%;
+  padding: 5%;
+  height: 100%;
+  background-color: #F0F1F6;
+}
+
+.block {
+  width: 50%;
+  padding: 2%;
+  float: left;
+  border-radius: 3px;
+  box-shadow: 1px 2px 2px 1px #F1F2F7, -2px 0px 2px #F1F2F7;
+  // display: inline-block;
+}
+
+.photo {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  background-color: #F1F2F7;
+  border-radius: 5px;
+  padding: 10%;
+}
+
+.outline {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  padding: 5px;
+  margin: auto;
+  border: 1px solid #CFD0D4;
+}
+
+.round {
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  padding: 7px;
+  border: 2px solid #CFD0D4;
+}
+
+.upload {
+  width: 70px;
+  height: 70px;
+  opacity: 0.3;
+}
+
+.photo p {
+  color: #AFAFAF;
+}
+// -------------------------------- input ------------------------
+ion-item {
+  --highlight-height: 0;
+  background-color: white !important;
+}
+
+
+// ion-select {
+//   outline: 0;
+//   background-color: #ffffff !important;
+// }
+.inputs {
+  padding: 0 2%;
+  width: 50%;
+  float:left;
+}
+
+.inputs ion-input, .inputs ion-select{
+  border-bottom: 2px solid #CFD0D4;
+}
+
+.inputs span {
+  font-size: 12px;
+  color: rgb(139, 140, 145);
+  margin-left: 15px;
+}
+
+//-------------buttons--------------------------
+button{
+  width: 150px;
+  height: 30px;
+  text-transform: capitalize;
+  margin: 10px;
+  outline: 0px;
+  border: 1px solid #3B85FE;
+  background-color: #3B85FE;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.buttonreset {
+  background-color: #ffffff;
+  color: #3B85FE;
 }
