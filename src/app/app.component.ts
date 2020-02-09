@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Umumiy hisobot',
       url: '/report',
-      icon: 'trending-up'
+      icon: 'stats'
     },
     {
       title: 'O\'quvchilar',
