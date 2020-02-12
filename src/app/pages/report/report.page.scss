@@ -1,0 +1,13 @@
+.fonts {
+    font-weight: bold;
+}
+
+ion-text, ion-select {
+    font-size: small;
+}
+ion-item {
+    --border-style: none;
+    --background-hover: #ffffff;
+    --background-activated: #ffffff;
+    --background-focused: #ffffff;
+}

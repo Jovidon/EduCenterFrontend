@@ -7,6 +7,101 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="light">
+  <div class="ion-padding">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4">
+        <ion-list >
+          <ion-item>
+            <ion-text color="medium">O'quvchilar</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text slot="start">
+              <h5 class="fonts">249 nafar</h5>
+              <ion-text color="danger">
+                <ion-icon name="arrow-down"></ion-icon>
+                <ion-text>5 nafar</ion-text>
+              </ion-text>
+            </ion-text>
+            <ion-img slot="end" src="assets/img/bar.png"></ion-img>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="4">
+        <ion-list >
+          <ion-item>
+            <ion-text color="medium">O'qituvchilar</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text slot="start">
+              <h5 class="fonts">7 nafar</h5>
+              <ion-text color="success">
+                <ion-icon name="arrow-up"></ion-icon>
+                <ion-text>2 nafar</ion-text>
+              </ion-text>
+            </ion-text>
+            <ion-img slot="end" src="assets/img/bar.png"></ion-img>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="4">
+        <ion-list >
+          <ion-item>
+            <ion-text color="medium">Guruhlar</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text slot="start">
+              <h5 class="fonts">33 nafar</h5>
+              <ion-text color="danger">
+                <ion-icon name="arrow-down"></ion-icon>
+                <ion-text>1 ta</ion-text>
+              </ion-text>
+            </ion-text>
+            <ion-img slot="end" src="assets/img/bar.png"></ion-img>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-text slot="start">Daromad va xarajatlar</ion-text>
+            <ion-select  slot="end" interface="popover">
+              <ion-select-option *ngFor="let option of selectOptions" [selected]="option.selected" [value]="option.value">{{option.text}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <!-- There will ba a Line Chart -->
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4">
+        <ion-list>
+          <ion-item>
+            <ion-text>Sof foyda</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text slot="start">Hozirgacha umumiy daramad</ion-text>
+            <ion-text color="success">42.5 mln</ion-text>
+          </ion-item>
+          <ion-item>
+            <!-- There will ba a Doughnut Chart -->
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="8">
+        <ion-list>
+          <ion-item>
+            <ion-text>Fanlarning daromad ko'rsatkichi</ion-text>
+          </ion-item>
+          <ion-item>
+            
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    </div>
 </ion-content>
