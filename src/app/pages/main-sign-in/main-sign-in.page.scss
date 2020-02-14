@@ -1,0 +1,45 @@
+ion-item {
+    --background: transparent;
+    --border-style: none;
+    --highlight-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ion-row {
+    height: 100%;
+}
+
+h1 {
+    font-weight: bold;
+}
+.bgimg {
+    background-image: url('assets/img/university.jpg');
+    // background: url('../../img/getstart.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+ion-label, ion-input {
+    --color: #989aa2;
+    margin: 0;
+    padding: 0;
+}
+
+.fontsize {
+    font-size: small;
+    margin: 0;
+    padding: 0;
+}
+
+ion-input {
+    border-bottom: 2px solid #d7d8da;
+}
+
+ion-checkbox {
+    --border-radius: 5px;
+    --border-width: 1px;
+    --color: #989aa2;
+    margin: 0;
+    padding: 0;
+}
