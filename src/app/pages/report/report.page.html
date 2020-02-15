@@ -72,24 +72,24 @@
             </ion-select>
           </ion-item>
           <ion-item>
-            <!-- There will ba a Line Chart -->
+            <canvas #lineCanvas id="can"></canvas>
           </ion-item>
         </ion-list>
 
       </ion-col>
     </ion-row>
-    <ion-row class="ion-justify-content-center">
+    <ion-row class="ion-justify-content-center" >
       <ion-col size="4">
         <ion-list>
           <ion-item>
             <ion-text>Sof foyda</ion-text>
           </ion-item>
-          <ion-item>
-            <ion-text slot="start">Hozirgacha umumiy daramad</ion-text>
+          <ion-item >
+            <ion-text slot="start">Hozirgacha umumiy daromad</ion-text>
             <ion-text color="success">42.5 mln</ion-text>
           </ion-item>
-          <ion-item>
-            <!-- There will ba a Doughnut Chart -->
+          <ion-item class="itemHeight">
+            <canvas #doughnutCanvas1 id="dCan1"></canvas>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -98,8 +98,9 @@
           <ion-item>
             <ion-text>Fanlarning daromad ko'rsatkichi</ion-text>
           </ion-item>
-          <ion-item>
-            
+          <ion-item></ion-item>
+          <ion-item class="itemHeight">
+            <canvas #doughnutCanvas2 id="dCan2"></canvas>
           </ion-item>
         </ion-list>
       </ion-col>
