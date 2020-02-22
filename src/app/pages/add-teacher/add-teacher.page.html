@@ -8,24 +8,24 @@
 </ion-header>
 
 <ion-content color="light" class="ion-padding">
-  <form #signupForm="ngForm" novalidate   class="ion-margin">
+  <form #teacherForm="ngForm" novalidate class="ion-margin">
     <ion-row class="ion-padding">
-      <ion-col size="6">
+      <ion-col sizeLg="6" sizeMd="6" sizeSm="12" sizeXs="12" sizeXl="6">
         <ion-list class="shadow">
           <ion-item>
             <ion-label >O'qituvchining rasmi</ion-label>
           </ion-item>
-          <ion-item color="light" class="height ion-margin" lines justify-content-center>
+          <ion-item color="light" class="height ion-margin ion-justify-content-center" lines >
             <img size="12" src="assets/img/upload.ico">
             <!-- <ion-label>Rasmni tanlang</ion-label> -->
           </ion-item>
         </ion-list>
       </ion-col>
-      <ion-col size="6">
+      <ion-col sizeLg="6" sizeMd="6" sizeSm="12" sizeXs="12" sizeXl="6">
         <ion-list class="ion-text-left">
           <ion-item>
             <ion-label position="floating" >Ism</ion-label>
-            <ion-input [(ngModel)]="signup.name" name="name" type="text" #name="ngModel">
+            <ion-input [(ngModel)]="teacher.name" name="name" type="text" #name="ngModel">
             </ion-input>
           </ion-item>
             <ion-text color="medium" class="ion-margin-start">
@@ -33,33 +33,37 @@
             </ion-text>
           <ion-item>
             <ion-label position="floating">Telefon raqam</ion-label>
-            <ion-input [(ngModel)]="signup.phone" name="phone" type="phone" #phone="ngModel">
+            <ion-input [(ngModel)]="teacher.phone" name="phone" type="phone" #phone="ngModel">
             </ion-input>
           </ion-item>
           <ion-text color="medium" class="ion-margin-start">O'qituvchining telefon raqamini kiriting</ion-text>
 
           <ion-item>
             <ion-label position="floating" >Fanlar</ion-label>
-            <ion-input [(ngModel)]="signup.subject" name="subject" type="text" #subject="ngModel">
+            <ion-input [(ngModel)]="teacher.subjects" name="subjects" type="text" #subjects="ngModel">
             </ion-input>
           </ion-item>
           <ion-text color="medium" class="ion-margin-start">O'qituvchining o'tadigan fanlarni kiriting</ion-text>
 
-          <ion-item class="item">
-            <ion-label position="floating">Holati</ion-label>
-            <ion-select [(ngModel)]="signup.condition" name="condition" #condition="ngModel">
-              <ion-select-option value="a">Aktiv</ion-select-option>
-              <ion-select-option value="p">Muzlatilgan</ion-select-option>
-            </ion-select>
+          <ion-item class="item" details>
+            <input [(ngModel)]="teacher.saleryType" (input)="onInput()" [class.inputWidth]="inputOn" name="saleryType" type="text" #saleryType="ngModel" list="salery"  placeholder="Oylik turi">
+            <datalist id="salery">
+              <option value="Oylik">
+              <option value="Kurs bo'yicha">
+            </datalist>
+            <div *ngIf="inputOn" class="inputWidth">
+              <input [(ngModel)]="teacher.salery" type="text" name="salery" #salery="ngModel" >
+              <span>{{ sType }}</span>
+            </div>
           </ion-item>
-          <ion-text color="medium" class="ion-margin-start">O'qituvchining holatini tanlang</ion-text>
+          <ion-text color="medium" class="ion-margin-start">O'qituvchining maoshi turini tanlang</ion-text>
         </ion-list> 
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="12" class="ion-padding">
-        <ion-button type="reset" class="ion-margin">Bekor qilish</ion-button>
-        <ion-button (click)="onSignup(signupForm)" type="submit" class="ion-margin">Qo'shish</ion-button>
+        <ion-button (click)="cancel()" type="reset" class="ion-margin" fill="outline">Bekor qilish</ion-button>
+        <ion-button (click)="onTeacher(teacherForm)" type="submit" class="ion-margin">Qo'shish</ion-button>
       </ion-col>
     </ion-row>
   </form>
