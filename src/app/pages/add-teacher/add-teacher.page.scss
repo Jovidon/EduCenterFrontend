@@ -1,0 +1,62 @@
+.signup-logo {
+    padding: 20px 0;
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .ion-padding {
+    text-align: center;
+  }
+  
+  form {
+    background-color: #ffffff;
+  }
+  
+  ion-item {
+    --highlight-height: 0;
+    --border-style: none;
+    --background-hover: #ffffff;
+  }
+  
+  ion-text {
+    font-size: small;
+  }
+  
+  .shadow {
+    box-shadow: 1px 1px 2px 2px #f4f5f8, -1px -1px 2px #f4f5f8;
+    border-radius: 3px;
+  }
+  
+  .height {
+    --min-height: 200px;
+  }
+  
+  img {
+    min-width: 80px;
+    height: 80px;
+    opacity: 0.1;
+    display: block;
+    margin: auto;
+  }
+  
+  input {
+    outline: 0px;
+    width: 100%;
+    border: 0px;
+  }
+  
+  .inputWidth {
+    width: 50%;
+    border-bottom: 2px solid #d7d8da;
+  }
+  
+  .inputWidth input {
+    border: 0px;
+    width: 80%;
+    direction: rtl;
+  }
+  
+  ion-input, input {
+    border-bottom: 2px solid #d7d8da;
+    display: inline-block;
+  }

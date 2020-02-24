@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { SignupPage } from './signup';
-import { SignupPageRoutingModule } from './signup-routing.module';
+import { AddTeacherPageRoutingModule } from './add-teacher-routing.module';
+
+import { AddTeacherPage } from './add-teacher.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SignupPageRoutingModule
+    AddTeacherPageRoutingModule
   ],
-  declarations: [
-    SignupPage,
-  ]
+  declarations: [AddTeacherPage]
 })
-export class SignUpModule { }
+export class AddTeacherPageModule {}

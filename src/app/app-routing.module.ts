@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule)
   },
   {
-    path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignUpModule)
-  },
-  {
     path: 'schedule',
     loadChildren: () => import('./pages/schedule/schedule.module').then(m => m.ScheduleModule)
   },
@@ -38,7 +34,8 @@ const routes: Routes = [
   {
     path: 'groups',
     loadChildren: () => import('./pages/groups/groups.module').then( m => m.GroupsPageModule)
-  },  {
+  },
+  {
     path: 'main',
     loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
   },
@@ -49,6 +46,9 @@ const routes: Routes = [
   {
     path: 'teacher-salary',
     loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
+
+    path: 'add-teacher',
+    loadChildren: () => import('./pages/add-teacher/add-teacher.module').then( m => m.AddTeacherPageModule)
   }
 
 ];
