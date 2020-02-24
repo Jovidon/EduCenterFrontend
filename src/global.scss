@@ -40,3 +40,8 @@
 @import '~assets/styles/ngx-datatable/_material.css';
 @import '~assets/styles/ngx-datatable/_bootstrap.css';
 @import '~assets/styles/ngx-datatable/_icons.css';
+
+.split-pane-visible >.split-pane-side {
+    min-width: 20%!important;
+    max-width: 20%!important;
+  }

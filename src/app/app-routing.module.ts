@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'main-sign-in',
     loadChildren: () => import('./pages/main-sign-in/main-sign-in.module').then( m => m.MainSignInPageModule)
+  },
+  {
+    path: 'teacher-salary',
+    loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
   }
 
 ];
