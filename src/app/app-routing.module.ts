@@ -47,7 +47,8 @@ const routes: Routes = [
     path: 'teacher-salary',
     loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
   },
-  {path: 'add-teacher',
+  {
+    path: 'add-teacher',
     loadChildren: () => import('./pages/add-teacher/add-teacher.module').then( m => m.AddTeacherPageModule)
   }
 
