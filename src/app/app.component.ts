@@ -49,11 +49,6 @@ export class AppComponent implements OnInit {
       url: '/profile',
       icon: 'contact'
     },
-    {
-      title: 'SignUp',
-      url: '/signup',
-      icon: 'person-add'
-    }
   ];
   loggedIn = false;
   dark = false;
