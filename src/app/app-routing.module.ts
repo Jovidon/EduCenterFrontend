@@ -44,6 +44,9 @@ const routes: Routes = [
     loadChildren: () => import('./pages/main-sign-in/main-sign-in.module').then( m => m.MainSignInPageModule)
   },
   {
+    path: 'teacher-salary',
+    loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
+
     path: 'add-teacher',
     loadChildren: () => import('./pages/add-teacher/add-teacher.module').then( m => m.AddTeacherPageModule)
   }

@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>O'qituvchiga to'lovlar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row class="ion-margin">
+      <ion-col size="12">
+        <div>
+          <ion-row >
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12" class="ion-padding">
+              <h3>{{ teacher.name }} {{ teacher.surname }}</h3>
+              <ion-item class="item-border">
+                <img [src]="teacher.profPic" class="avatar">
+                <ion-list>
+                  <h4>{{ teacher.name }} {{ teacher.surname }}</h4>
+                  <ion-label color="primary">{{teacher.salaryType}}</ion-label>
+                  <ion-label *ngIf="teacher.salaryType == 'Oylik'" color="medium">UZS {{teacher.salary}}</ion-label>
+                  <ion-label color="medium">P: {{teacher.phone}}</ion-label>
+                </ion-list>
+              </ion-item>
+            </ion-col>
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12">
+              <ion-row>
+                <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="6">
+                  <ion-list>
+                    <ion-button type="button">Avans berish</ion-button><br>
+                    <ion-note color="dark">Avans yoki oylik berish</ion-note>
+                  </ion-list>
+                </ion-col>
+                <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="6">
+                  <ion-list>
+                    <ion-button type="button" color="dark" >To'lovlar tarixi</ion-button>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="teacher.salaryType == 'Foiz'" class="ion-justify-content-end">
+                <ion-col size="12">
+                  <ion-item>
+                    <ion-label color="medium">Shu oy uchun maoshi: <ion-text color="primary"> 2300000 </ion-text>UZS</ion-label>
+                  </ion-item>
+                  <ion-note color="dark" class="ion-margin-start">Shu oy uchun mavjud maosh miqdori</ion-note>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12" class="ion-padding">
+              <ion-item>
+                <ion-text color="medium">{{salary}}</ion-text>
+                <!-- <ion-button fill="clear" size="small" color="primary"> -->
+                  <ion-icon name="create" color="primary" slot="end"></ion-icon>
+                <!-- </ion-button> -->
+              </ion-item>
+              <ion-note color="dark" class="ion-margin-start">O'qituvchining umumiy oyligi</ion-note>
+            </ion-col>
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12" class="ion-padding">
+              <ion-item>
+                <ion-label color="medium">Qolgan maoshi: <ion-text color="primary">1300000</ion-text> UZS</ion-label>
+              </ion-item>
+              <ion-note color="dark" class="ion-margin-start">O'qituvchining qolgan oylik maoshi</ion-note>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12" class="ion-padding">
+              <ion-grid class="grid">
+                <ion-row>
+                  <ion-col size="1">#</ion-col>
+                  <ion-col size="2">Guruh nomi</ion-col>
+                  <ion-col size="2">Holati</ion-col>
+                  <ion-col size="3">Fan nomi</ion-col>
+                  <ion-col size="2">Ta'lim shakli</ion-col>
+                  <ion-col size="2"> </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let group of groups; let i = index">
+                  <ion-col size="1">{{i + 1}}</ion-col>
+                  <ion-col size="2">Guruh #{{group.number}}</ion-col>
+                  <ion-col size="2">{{group.condition}}</ion-col>
+                  <ion-col size="3">{{group.subject}}</ion-col>
+                  <ion-col size="2">{{group.eduStyle}}</ion-col>
+                  <ion-col size="2">
+                    <ion-icon name="create" color="primary"></ion-icon>
+                    <ion-icon name="close" color="danger"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+            <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12">
+              <ion-row>
+                <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="6">
+                  <ion-list>
+                    <ion-button type="button" fill="outline">Bekor qilish</ion-button><br>
+                  </ion-list>
+                </ion-col>
+                <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="6">
+                  <ion-list>
+                    <ion-button type="button" >Qo'shish</ion-button>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-row>
