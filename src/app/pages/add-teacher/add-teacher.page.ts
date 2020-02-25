@@ -17,9 +17,10 @@ export class AddTeacherPage implements OnInit {
      surname: '',
      phone: '',
      subjects: '',
-     saleryType: '',
-     salery: null,
-    };
+     salaryType: '',
+     salary: null,
+     profPic: ''
+  };
   submitted = false;
 
   constructor(
@@ -29,10 +30,10 @@ export class AddTeacherPage implements OnInit {
 
   onInput() {
     this.sType = '';
-    if (this.teacher.saleryType === 'Kurs bo\'yicha') {
-      this.sType = '\%';
+    if (this.teacher.salaryType === 'Foiz') {
+      this.sType = '%';
       this.inputOn = true;
-    } else if (this.teacher.saleryType === 'Oylik') {
+    } else if (this.teacher.salaryType === 'Oylik') {
       this.sType = ' UZS';
       this.inputOn = true;
     } else {
@@ -40,11 +41,13 @@ export class AddTeacherPage implements OnInit {
     }
     console.log(this.sType);
   }
+
   cancel() {
   }
 
   onTeacher(form: NgForm) {
   }
+
   ngOnInit() {
   }
 

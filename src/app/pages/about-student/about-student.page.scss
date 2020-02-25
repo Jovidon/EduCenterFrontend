@@ -6,10 +6,6 @@ div {
     background-color: #ffffff;
 }
 
-h3 {
-    margin: 0 1rem;
-}
-
 h4 {
     font-weight: 700;
 }
@@ -22,7 +18,7 @@ h4 {
 }
 
 ion-list > ion-button {
-    width: 60%;
+    width: 80%;
 }
 
 ion-col > ion-list {
@@ -32,18 +28,20 @@ ion-col > ion-list {
 
 .grid {
     border-radius: 3px;
+    padding: 0;
     box-shadow: 2px 2px 3px #f5f6f9, -2px -2px 3px #f5f6f9;
 }
 
 .grid ion-row {
-    font-size: 0.9rem;
     color: #222428;
+    min-height: 40px;
 }
 
 .grid ion-row:first-child ion-col {
     color: #989aa2;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    background-color: #f4f5f8;
 }
 
 

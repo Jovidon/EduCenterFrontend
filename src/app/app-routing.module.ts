@@ -49,7 +49,15 @@ const routes: Routes = [
   },
   {path: 'add-teacher',
     loadChildren: () => import('./pages/add-teacher/add-teacher.module').then( m => m.AddTeacherPageModule)
+  },  {
+    path: 'about-student',
+    loadChildren: () => import('./pages/about-student/about-student.module').then( m => m.AboutStudentPageModule)
+  },
+  {
+    path: 'teacher-salary-history',
+    loadChildren: () => import('./pages/teacher-salary-history/teacher-salary-history.module').then( m => m.TeacherSalaryHistoryPageModule)
   }
+
 
 ];
 

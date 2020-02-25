@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>O'quvchi haqida</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row class="ion-margin">
+      <ion-col size="12">
+        <div>
+          <ion-row >
+            <ion-col sizeLg="8" sizeXl="8" sizeMd="8" sizeXs="12" sizeSm="8" class="ion-padding">
+              <ion-item class="item-border">
+                <img [src]="student.profPic" class="avatar">
+                <ion-list>
+                  <h4>{{ student.name }} {{ student.surname }}</h4>
+                  <ion-label color="medium">P: {{student.phone}}</ion-label>
+                </ion-list>
+              </ion-item>
+            </ion-col>
+            <ion-col sizeLg="4" sizeXl="4" sizeMd="4" sizeXs="12" sizeSm="4">
+              <ion-list>
+                <ion-button type="button" color="dark" size="small">To'lovlar tarixi</ion-button>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="ion-padding">
+              <ion-grid class="grid">
+                <ion-row>
+                  <ion-col size="1">#</ion-col>
+                  <ion-col size="2">Guruh nomi</ion-col>
+                  <ion-col size="2">Holati</ion-col>
+                  <ion-col size="3">Fan nomi</ion-col>
+                  <ion-col size="2">Ta'lim shakli</ion-col>
+                  <ion-col size="2"> </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let group of groups; let i = index">
+                  <ion-col size="1">{{i + 1}}</ion-col>
+                  <ion-col size="2">Guruh #{{group.number}}</ion-col>
+                  <ion-col size="2">{{group.condition}}</ion-col>
+                  <ion-col size="3">{{group.subject}}</ion-col>
+                  <ion-col size="2">{{group.eduStyle}}</ion-col>
+                  <ion-col size="2">
+                    <ion-icon name="create" color="primary"></ion-icon>
+                    <ion-icon name="close" color="danger"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-row>
