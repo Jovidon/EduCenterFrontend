@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>O'qituvchi to'lovlar tarixi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row class="ion-margin">
+      <ion-col size="12">
+        <div class="ion-padding">
+          <ion-row>
+            <ion-col sizeLg="8" sizeXl="8" sizeMd="8" sizeXs="12" sizeSm="8" class="ion-padding">
+              <ion-item class="item-border">
+                <img [src]="teacher.profPic" class="avatar">
+                <ion-list>
+                  <h4>{{ teacher.name }} {{ teacher.surname }}</h4>
+                  <ion-label color="primary">{{teacher.salaryType}}</ion-label>
+                  <ion-label *ngIf="teacher.salaryType == 'Oylik'" color="medium">UZS {{teacher.salary | currency: 'UZS '}}</ion-label>
+                  <ion-label color="medium">P: {{teacher.phone}}</ion-label>
+                </ion-list>
+              </ion-item>
+            </ion-col>
+            <ion-col sizeLg="4" sizeXl="4" sizeMd="4" sizeXs="12" sizeSm="4">
+              <h1>To'lovlar tarixi</h1>
+              <ion-button type="button" color="dark" size="small" >Chop etish</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col sizeLg="7" sizeXl="7" sizeMd="7" sizeXs="10" sizeSm="7" class="ion-padding">
+              <ion-grid class="grid">
+                <ion-row>
+                  <ion-col size="1">#</ion-col>
+                  <ion-col size="5">To'lov vaqt</ion-col>
+                  <ion-col size="3">Avans summasi</ion-col>
+                  <ion-col size="3">Qolgan maoshi</ion-col>
+                </ion-row>
+                <ion-row *ngFor="let avans of avansHistory; let i = index">
+                  <ion-col size="1">{{i + 1}}</ion-col>
+                  <ion-col size="5">{{ avans.date| date: 'longDate'}}</ion-col>
+                  <ion-col size="3">{{ avans.avans | currency: 'UZS'}}</ion-col>
+                  <ion-col size="3">{{ avans.qoldiq | currency: 'UZS'}}</ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+            <ion-col sizeLg="5" sizeXl="5" sizeMd="5" sizeXs="2" sizeSm="5" class="ion-padding">
+              <ion-item class="item-border ion-margin">
+                <h5 color="dark" slot="end">#{{id}}</h5>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" class="ion-padding ion-justify-content-center">
+              <ion-item class="item-border">
+                <ion-button type="button" class="ion-margin" size="default" slot="end" fill="outline">Hisob holati</ion-button>
+                <ion-button type="submit" class="ion-margin" size="default" slot="end">hisobni to'ldirish</ion-button>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-row>
