@@ -47,15 +47,33 @@ const routes: Routes = [
     path: 'teacher-salary',
     loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
   },
-  {path: 'add-teacher',
+  {
+    path: 'add-teacher',
     loadChildren: () => import('./pages/add-teacher/add-teacher.module').then( m => m.AddTeacherPageModule)
-  },  {
+  },
+  {
     path: 'about-student',
     loadChildren: () => import('./pages/about-student/about-student.module').then( m => m.AboutStudentPageModule)
   },
   {
     path: 'teacher-salary-history',
     loadChildren: () => import('./pages/teacher-salary-history/teacher-salary-history.module').then( m => m.TeacherSalaryHistoryPageModule)
+  },
+  {
+    path: 'groups',
+    loadChildren: () => import('./pages/groups/groups.module').then( m => m.GroupsPageModule)
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'main-sign-in',
+    loadChildren: () => import('./pages/main-sign-in/main-sign-in.module').then( m => m.MainSignInPageModule)
+  },
+  {
+    path: 'teacher-salary',
+    loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
   }
 
 
