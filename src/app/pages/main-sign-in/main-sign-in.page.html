@@ -17,7 +17,7 @@
           </ion-label>
           <ion-item>
             <ion-label position="floating" class="fontsize">Username</ion-label>
-            <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel"></ion-input>
+            <ion-input [(ngModel)]="signup.phone" name="phone" type="text" #phone="ngModel"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating" class="fontsize">Parol</ion-label>
@@ -34,7 +34,7 @@
               <ion-label class="fontsize">Forgot password</ion-label>
             </ion-col>
           </ion-row>
-          <ion-button type="button" size="default" size="5" class="ion-margin" fill="solid">Kirish</ion-button>
+          <ion-button type="button" size="default" size="5" class="ion-margin" fill="solid" (click)="logIn()">Kirish</ion-button>
           <ion-button type="submit" size="default" size="5" class="ion-margin" fill="outline">Ro'yxatdan o'tish</ion-button>
         </ion-list>
       </form>

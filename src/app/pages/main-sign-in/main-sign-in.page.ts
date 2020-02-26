@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../../providers/api'
 
 @Component({
   selector: 'main-sign-in',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainSignInPage implements OnInit {
   signup = {
-    username: '',
+    phone: '',
     password: '',
   };
-  constructor() { }
+  constructor(private apiProvider :RestService) { }
 
   ngOnInit() {
+  }
+  
+  logIn() {
+    this.apiProvider.post('login',this.signup).subscribe(res=>{
+      if(res.status){
+        console.log("to'g'ri kiritildi");
+      }
+      else{
+        console.log("xato kiritildi")
+      }
+    })
   }
 
 }

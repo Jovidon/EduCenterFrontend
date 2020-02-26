@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestService } from '../../providers/api';
 
 @Component({
   selector: 'main',
@@ -8,18 +9,24 @@ import { Component, OnInit } from '@angular/core';
 export class MainPage implements OnInit {
   signup = {
     name: '',
-    sname: '',
+    address: '',
     email: '',
-    login: '',
     password: '',
-    rpassword: '',
-    centerName: '',
+    info: '',
     phone: '',
-    terms: false
+    Regions_id: 1
   };
-  constructor() { }
+  constructor(private apiProvider :RestService) { }
 
   ngOnInit() {
+  }
+  signUp(){
+    this.apiProvider.post('addeducenter',this.signup).subscribe(res=>{
+      console.log(res);
+    });
+  }
+  logFun(){
+    console.log(this.signup);
   }
 
 }

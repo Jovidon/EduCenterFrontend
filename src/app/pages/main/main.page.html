@@ -18,14 +18,14 @@
           <ion-row>
             <ion-col class="fontsize" size="6">
               <ion-item>
-                <ion-label position="floating" class="fontsize">Ismingiz</ion-label>
+                <ion-label position="floating" class="fontsize">Ta'lim muassasa nomi</ion-label>
                 <ion-input [(ngModel)]="signup.name" name="name" type="text" #name="ngModel"></ion-input>
               </ion-item>
             </ion-col>
             <ion-col class="fontsize" size="6">
               <ion-item>
-                <ion-label position="floating" class="fontsize">Familiyangiz</ion-label>
-                <ion-input [(ngModel)]="signup.sname" name="sname" type="text" #sname="ngModel"></ion-input>
+                <ion-label position="floating" class="fontsize">address</ion-label>
+                <ion-input [(ngModel)]="signup.address" name="address" type="text" #address="ngModel"></ion-input>
               </ion-item>
             </ion-col>
           </ion-row>
@@ -35,7 +35,7 @@
           </ion-item>
           <ion-item>
             <ion-label position="floating" class="fontsize">Login</ion-label>
-            <ion-input [(ngModel)]="signup.login" name="login" type="text" #login="ngModel"></ion-input>
+            <ion-input ></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating" class="fontsize">Parol</ion-label>
@@ -43,21 +43,21 @@
           </ion-item>
           <ion-item>
             <ion-label position="floating" class="fontsize">Parolni takrorlash</ion-label>
-            <ion-input [(ngModel)]="signup.rpassword" name="rpassword" type="password" #rpassword="ngModel"></ion-input>
+            <ion-input></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="floating" class="fontsize">Ta'lim muassasa nomi</ion-label>
-            <ion-input [(ngModel)]="signup.centerName" name="centerName" type="text" #centerName="ngModel"></ion-input>
+            <ion-label position="floating" class="fontsize">Info</ion-label>
+            <ion-input [(ngModel)]="signup.info" name="info" type="text" #info="ngModel"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating" class="fontsize">Telefon raqam</ion-label>
             <ion-input [(ngModel)]="signup.phone" name="phone" type="text" #phone="ngModel"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-checkbox id="check" [(ngModel)]="signup.terms" name="terms" #terms="ngModel"></ion-checkbox>
+            <ion-checkbox id="check"></ion-checkbox>
             <ion-label for="check" class="fontsize">Men foydalanish qoidalari bilan tanishdim va roziman</ion-label>
           </ion-item>
-          <ion-button type="submit" size="default" expand="block">Ro'yxatdan o'tish</ion-button>
+          <ion-button type="submit" size="default" expand="block" (click)="signUp()">Ro'yxatdan o'tish</ion-button>
 
         </ion-list>
       </form>
