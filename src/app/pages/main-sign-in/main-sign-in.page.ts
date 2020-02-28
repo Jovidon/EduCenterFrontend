@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RestService } from '../../providers/api'
+import { RestService } from '../../providers/api';
+import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'main-sign-in',
@@ -11,7 +13,7 @@ export class MainSignInPage implements OnInit {
     phone: '',
     password: '',
   };
-  constructor(private apiProvider :RestService) { }
+  constructor(private apiProvider :RestService, private storage: Storage, private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,11 +22,17 @@ export class MainSignInPage implements OnInit {
     this.apiProvider.post('login',this.signup).subscribe(res=>{
       if(res.status){
         console.log("to'g'ri kiritildi");
+        this.storage.set('eduCenter' , res).then((res) => {
+          this.router.navigate(['/schedule']);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
       }
       else{
         console.log("xato kiritildi")
       }
-    })
+    });
   }
 
 }

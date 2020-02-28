@@ -3,6 +3,8 @@ import { Teacher } from '../../interfaces/teacher';
 import { Router } from '@angular/router';
 import { UserData } from '../../providers/user-data';
 import { NgForm } from '@angular/forms';
+import { RestService } from '../../providers/api';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'add-teacher',
@@ -12,28 +14,33 @@ import { NgForm } from '@angular/forms';
 export class AddTeacherPage implements OnInit {
   sType: string;
   inputOn = false;
-  teacher: Teacher = {
-     name: '',
-     surname: '',
-     phone: '',
-     subjects: '',
-     salaryType: '',
-     salary: null,
-     profPic: ''
+  user: Teacher = {
+    fullName : '',
+    address : '',
+    image : '',
+    info : '',
+    login : '',
+    pasword : '',
+    gender : 0,
+    phone : '',
+    salaryType: '',
+    salary: null,
   };
   submitted = false;
 
   constructor(
     public router: Router,
-    public userData: UserData
+    public userData: UserData,
+    private apiProvider :RestService, 
+    private storage: Storage
   ) {}
 
   onInput() {
     this.sType = '';
-    if (this.teacher.salaryType === 'Foiz') {
+    if (this.user.salaryType === 'Foiz') {
       this.sType = '%';
       this.inputOn = true;
-    } else if (this.teacher.salaryType === 'Oylik') {
+    } else if (this.user.salaryType === 'Oylik') {
       this.sType = ' UZS';
       this.inputOn = true;
     } else {
@@ -50,5 +57,12 @@ export class AddTeacherPage implements OnInit {
 
   ngOnInit() {
   }
+
+  addTesher(){
+    this.apiProvider.post('adduser', this.user).subscribe(res => {
+      
+    });
+  }
+
 
 }

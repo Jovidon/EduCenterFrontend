@@ -24,35 +24,62 @@
       <ion-col sizeLg="6" sizeMd="6" sizeSm="12" sizeXs="12" sizeXl="6">
         <ion-list class="ion-text-left">
           <ion-item>
-            <ion-label position="floating" >Ism</ion-label>
-            <ion-input [(ngModel)]="teacher.name" name="name" type="text" #name="ngModel">
+            <ion-label position="floating" >F.I.SH</ion-label>
+            <ion-input [(ngModel)]="user.fullName" name="fullName" type="text" #fullName="ngModel">
             </ion-input>
           </ion-item>
             <ion-text color="medium" class="ion-margin-start">
-              O'qituvchining ismini kiriting
+              O'qituvchining F.I.SH ni kiriting
             </ion-text>
           <ion-item>
-            <ion-label position="floating">Telefon raqam</ion-label>
-            <ion-input [(ngModel)]="teacher.phone" name="phone" type="phone" #phone="ngModel">
+            <ion-label position="floating">Manzili</ion-label>
+            <ion-input [(ngModel)]="user.address" name="address" type="text" #address="ngModel">
             </ion-input>
           </ion-item>
-          <ion-text color="medium" class="ion-margin-start">O'qituvchining telefon raqamini kiriting</ion-text>
-
+          <ion-text color="medium" class="ion-margin-start">
+            O'qituvchining yaxshash manzilini kiriting
+          </ion-text>
           <ion-item>
-            <ion-label position="floating" >Fanlar</ion-label>
-            <ion-input [(ngModel)]="teacher.subjects" name="subjects" type="text" #subjects="ngModel">
+            <ion-label position="floating" >Telifon raqam</ion-label>
+            <ion-input [(ngModel)]="user.phone" name="phone" type="phone" #phone="ngModel">
             </ion-input>
           </ion-item>
-          <ion-text color="medium" class="ion-margin-start">O'qituvchining o'tadigan fanlarni kiriting</ion-text>
+          <ion-text color="medium" class="ion-margin-start">
+            O'qituvchining telifon raqamini kiriting
+          </ion-text>
+          <ion-item>
+            <ion-label position="floating" >Login</ion-label>
+            <ion-input [(ngModel)]="user.login" name="login" type="text" #login="ngModel">
+            </ion-input>
+          </ion-item>
+            <ion-text color="medium" class="ion-margin-start">
+              O'qituvchiga login kiriting
+            </ion-text>
+          <ion-item>
+            <ion-label position="floating">Parol</ion-label>
+            <ion-input [(ngModel)]="user.password" name="password" type="password" #password="ngModel">
+            </ion-input>
+          </ion-item>
+          <ion-text color="medium" class="ion-margin-start">
+            O'qituvchiga parol kiriting
+          </ion-text>
+          <ion-item>
+            <ion-label position="floating" >Parol 2</ion-label>
+            <ion-input>
+            </ion-input>
+          </ion-item>
+          <ion-text color="medium" class="ion-margin-start">
+            O'qituvchiga parolni qayta kiriting
+          </ion-text>
 
           <ion-item class="item" details>
-            <input [(ngModel)]="teacher.salaryType" (input)="onInput()" [class.inputWidth]="inputOn" name="salaryType" type="text" #salaryType="ngModel" list="salary"  placeholder="Oylik turi">
+            <input [(ngModel)]="user.salaryType" (input)="onInput()" [class.inputWidth]="inputOn" name="salaryType" type="text" #salaryType="ngModel" list="salary"  placeholder="Oylik turi">
             <datalist id="salary">
               <option value="Oylik">
               <option value="Foiz">
             </datalist>
             <div *ngIf="inputOn" class="inputWidth">
-              <input [(ngModel)]="teacher.salary" type="text" name="salary" #salary="ngModel" >
+              <input [(ngModel)]="user.salary" type="text" name="salary" #salary="ngModel" >
               <span>{{ sType }}</span>
             </div>
           </ion-item>
