@@ -10,13 +10,19 @@ export class TeacherSalaryHistoryPage implements OnInit {
   id = 12345;
   salary: string;
   teacher: Teacher = {
-    name: 'BaerJon',
-    surname: 'AbdullaTeddy',
+    fullName: 'BaerJon',
+    address: 'AbdullaTeddy',
     salary: 2000000,
     salaryType: 'Foiz',
     phone: '(99) 999-99-99',
-    profPic: 'assets/img/speakers/bear.jpg',
-    subjects: '',
+    image: 'assets/img/speakers/bear.jpg',
+    EduCenter_id: 1,
+    isActive: 1,
+    Roles_id: 3,
+    info : '',
+    login : '',
+    pasword : '',
+    gender : 1,
   };
 
   avansHistory = [

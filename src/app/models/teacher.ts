@@ -1,6 +1,6 @@
-import {UserOptions} from './user-options';
+import { User } from './user';
 
-export interface Teacher extends UserOptions {
+export class Teacher extends User {
     salary: Number;
     salaryType: string;
     EduCenter_id: Number;
