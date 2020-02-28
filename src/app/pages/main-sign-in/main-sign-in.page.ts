@@ -32,7 +32,7 @@ export class MainSignInPage implements OnInit {
       else{
         console.log("xato kiritildi")
       }
-    });
+    })
   }
 
 }

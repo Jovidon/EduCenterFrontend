@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Teacher } from '../../interfaces/teacher';
+import { Teacher } from '../../models/teacher';
 import { Router } from '@angular/router';
 import { UserData } from '../../providers/user-data';
 import { NgForm } from '@angular/forms';
@@ -14,18 +14,7 @@ import { Storage } from '@ionic/storage';
 export class AddTeacherPage implements OnInit {
   sType: string;
   inputOn = false;
-  user: Teacher = {
-    fullName : '',
-    address : '',
-    image : '',
-    info : '',
-    login : '',
-    pasword : '',
-    gender : 0,
-    phone : '',
-    salaryType: '',
-    salary: null,
-  };
+  user = new Teacher();
   submitted = false;
 
   constructor(
@@ -33,7 +22,15 @@ export class AddTeacherPage implements OnInit {
     public userData: UserData,
     private apiProvider :RestService, 
     private storage: Storage
-  ) {}
+  ) {
+    storage.get('eduCenter').then(res => {
+      this.user.EduCenter_id = res.id;
+      this.apiProvider.getData('getteachers',res).then(res => {
+        console.log(res);
+      })
+      
+    })
+  }
 
   onInput() {
     this.sType = '';
@@ -58,8 +55,9 @@ export class AddTeacherPage implements OnInit {
   ngOnInit() {
   }
 
-  addTesher(){
+  addTeacher(){
     this.apiProvider.post('adduser', this.user).subscribe(res => {
+      console.log(res);
       
     });
   }

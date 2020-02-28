@@ -71,6 +71,14 @@
           <ion-text color="medium" class="ion-margin-start">
             O'qituvchiga parolni qayta kiriting
           </ion-text>
+          <ion-item>
+            <ion-label position="floating" >Info</ion-label>
+            <ion-input [(ngModel)]="user.info" name="info" type="text" #info="ngModel">
+            </ion-input>
+          </ion-item>
+          <ion-text color="medium" class="ion-margin-start">
+            Qo'shimcha ma'lumot
+          </ion-text>
 
           <ion-item class="item" details>
             <input [(ngModel)]="user.salaryType" (input)="onInput()" [class.inputWidth]="inputOn" name="salaryType" type="text" #salaryType="ngModel" list="salary"  placeholder="Oylik turi">
@@ -90,7 +98,7 @@
     <ion-row>
       <ion-col size="12" class="ion-padding">
         <ion-button (click)="cancel()" type="button" class="ion-margin" fill="outline">Bekor qilish</ion-button>
-        <ion-button (click)="onTeacher(teacherForm)" type="submit" class="ion-margin">Qo'shish</ion-button>
+        <ion-button (click)="addTeacher()" type="submit" class="ion-margin">Qo'shish</ion-button>
       </ion-col>
     </ion-row>
   </form>

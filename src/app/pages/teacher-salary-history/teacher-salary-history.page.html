@@ -15,9 +15,9 @@
           <ion-row>
             <ion-col sizeLg="8" sizeXl="8" sizeMd="8" sizeXs="12" sizeSm="8" class="ion-padding">
               <ion-item class="item-border">
-                <img [src]="teacher.profPic" class="avatar">
+                <img [src]="teacher.image" class="avatar">
                 <ion-list>
-                  <h4>{{ teacher.name }} {{ teacher.surname }}</h4>
+                  <h4>{{ teacher.fullName }} {{ teacher.fullName }}</h4>
                   <ion-label color="primary">{{teacher.salaryType}}</ion-label>
                   <ion-label *ngIf="teacher.salaryType == 'Oylik'" color="medium">UZS {{teacher.salary | currency: 'UZS '}}</ion-label>
                   <ion-label color="medium">P: {{teacher.phone}}</ion-label>

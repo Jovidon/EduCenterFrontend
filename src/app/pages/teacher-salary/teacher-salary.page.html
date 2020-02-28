@@ -14,11 +14,11 @@
         <div>
           <ion-row >
             <ion-col sizeLg="6" sizeXl="6" sizeMd="6" sizeXs="12" sizeSm="12" class="ion-padding">
-              <h3>{{ teacher.name }} {{ teacher.surname }}</h3>
+              <h3>{{ teacher.fullName }} {{ teacher.address }}</h3>
               <ion-item class="item-border">
-                <img [src]="teacher.profPic" class="avatar">
+                <img [src]="teacher.image" class="avatar">
                 <ion-list>
-                  <h4>{{ teacher.name }} {{ teacher.surname }}</h4>
+                  <h4>{{ teacher.fullName }} {{ teacher.surname }}</h4>
                   <ion-label color="primary">{{teacher.salaryType}}</ion-label>
                   <ion-label *ngIf="teacher.salaryType == 'Oylik'" color="medium">UZS {{teacher.salary}}</ion-label>
                   <ion-label color="medium">P: {{teacher.phone}}</ion-label>
