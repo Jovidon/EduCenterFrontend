@@ -12,7 +12,7 @@
 
   <ion-row class="ion-align-items-stretch">
     <ion-col size="12" size-md="6">
-      <ion-button type=button>
+      <ion-button type=button routerLink="/add-group">
         Guruh qo'shish
       </ion-button>
     </ion-col>
@@ -33,12 +33,12 @@
       [sortType]="'multi'" 
       [headerHeight]="50" 
       [footerHeight]="50">
-       <ngx-datatable-column name="Id">
+       <ngx-datatable-column name="id">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>#</span>
         </ng-template>
        </ngx-datatable-column>
-       <ngx-datatable-column name="ism">
+       <ngx-datatable-column name="guruhname">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>Guruh name</span>
         </ng-template>
@@ -48,22 +48,22 @@
           <span>Holati</span>
         </ng-template>
        </ngx-datatable-column>
-       <ngx-datatable-column name="ism">
+       <ngx-datatable-column name="fannomi">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>Fan nomi</span>
         </ng-template>
        </ngx-datatable-column>
-       <ngx-datatable-column name="Guruhlar">
+       <ngx-datatable-column name="shakli">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>Ta'lim shakli</span>
         </ng-template>
        </ngx-datatable-column>
-       <ngx-datatable-column name="balance">
+       <ngx-datatable-column name="miqdori">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>To'lov miqdori</span>
         </ng-template>
        </ngx-datatable-column>
-       <ngx-datatable-column name="guruh">
+       <ngx-datatable-column name="teacher">
         <ng-template let-column="column" ngx-datatable-header-template>
           <span>O'qituvchi</span>
         </ng-template>

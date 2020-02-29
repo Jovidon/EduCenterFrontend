@@ -21,17 +21,15 @@ export class GroupsPage implements OnInit {
   ) {
     this.columns = [
       { name: 'id' },
-      { name: 'ISM' },
-      { name: 'Guruh' },
-      { name: 'Tel' },
-      { name: 'Guruhlar' },
-      { name: 'Vaqti' },
-      { name: 'Holati' },
-      { name: 'Balance' },
-      { name: 'Action' },
+      { name: 'guruhname' },
+      { name: 'holati' },
+      { name: 'fannomi' },
+      { name: 'shakli' },
+      { name: 'miqdori' },
+      { name: 'teacher' }
     ];
 
-    this.http.get<Data>('../../assets/movies.json')
+    this.http.get<Data>('../../assets/grup.json')
       .subscribe((res) => {
         console.log(res)
         this.rows = res.movies;

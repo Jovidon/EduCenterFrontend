@@ -74,6 +74,22 @@ const routes: Routes = [
   {
     path: 'teacher-salary',
     loadChildren: () => import('./pages/teacher-salary/teacher-salary.module').then( m => m.TeacherSalaryPageModule)
+  },
+  {
+    path: 'tables',
+    loadChildren: () => import('./pages/tables/tables.module').then( m => m.TablesPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'reports',
+    loadChildren: () => import('./pages/reports/reports.module').then( m => m.ReportsPageModule)
+  },
+  {
+    path: 'add-group',
+    loadChildren: () => import('./pages/add-group/add-group.module').then( m => m.AddGroupPageModule)
   }
 
 
