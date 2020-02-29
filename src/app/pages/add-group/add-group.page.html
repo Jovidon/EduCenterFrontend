@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Guruh qo'shish</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+  <div class="container" class="ion-margin">
+    <form #teacherForm="ngForm" novalidate >
+      <ion-row class="ion-padding">
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="12" sizeXs="12" sizeXl="4">
+          <ion-list class="shadow">
+            <ion-list class="ion-text-left">
+              <ion-item class="item" details>
+                <input  name="salaryType"
+                  type="text"  list="salary" placeholder="Fan">
+                <datalist id="salary">
+                  <option value="Matimatika"></option>
+                  <option value="Ona tili"></option>
+                  <option value="Ingliz tili"></option>
+                  <option value="Web daturlash"></option>
+                  <option value="Tarx"></option>
+                  <option value="Fizika"></option>
+                </datalist>
+              </ion-item>
+              <ion-text color="medium" class="ion-margin-start">Guruhda o'rgatiladigan fanni tanlang</ion-text>
+            </ion-list>
+          </ion-list>
+        </ion-col>
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="12" sizeXs="12" sizeXl="4">
+          <ion-list class="shadow">
+            <ion-list class="ion-text-left">
+              <ion-item class="item" details>
+                <input  name="salaryType"
+                  type="text"  list="shakli" placeholder="Ta'lim shakli">
+                <datalist id="shakli">
+                  <option value="Oylik"></option>
+                  <option value="Foiz"></option>
+                </datalist>
+              </ion-item>
+              <ion-text color="medium" class="ion-margin-start">Guruhning ta'lim shaklini tanlang</ion-text>
+            </ion-list>
+          </ion-list>
+        </ion-col>
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="12" sizeXs="12" sizeXl="4">
+          <ion-list class="shadow">
+            <ion-list class="ion-text-left">
+              <ion-item class="item" details>
+                <input  name="salaryType"
+                  type="text"  list="holati" placeholder="Holati">
+                <datalist id="holati">
+                  <option value="Aktiv"></option>
+                  <option value="Muzlatilgan"></option>
+                </datalist>
+              </ion-item>
+              <ion-text color="medium" class="ion-margin-start">Guruh holatini tanlang</ion-text>
+            </ion-list>
+          </ion-list>
+        </ion-col>
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="12" sizeXs="12" sizeXl="4">
+          <ion-list class="shadow">
+            <ion-list class="ion-text-left">
+              <ion-item class="item" details>
+                <input  name="salaryType"
+                  type="text"  list="miqdori" placeholder="To'lov miqdori">
+              </ion-item>
+              <ion-text color="medium" class="ion-margin-start">Har bir o'quvchi uchun to'lov miqdorini kiriting</ion-text>
+            </ion-list>
+          </ion-list>
+        </ion-col>
+        <ion-col sizeLg="4" sizeMd="4" sizeSm="12" sizeXs="12" sizeXl="4">
+          <ion-list class="shadow">
+            <ion-list class="ion-text-left">
+              <ion-item class="item" details>
+                <input  name="salaryType"
+                  type="text"  list="tech" placeholder="O'qituvchi">
+                <datalist id="tech">
+                  <option value="Alisher Xazratov"></option>
+                  <option value="Valibek Nasimov"></option>
+                  <option value="Karimberdi Aliyev"></option>
+                  <option value="Elmurod Toshqulov"></option>
+                  <option value="Aleksadr Ivanov"></option>
+                  <option value="Najmiddin Qudratov"></option>
+                </datalist>
+              </ion-item>
+              <ion-text color="medium" class="ion-margin-start">Guruhga ta'lim beruvchi o'qituvchini tanlang</ion-text>
+            </ion-list>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </form>
+
+    <ion-row>
+      <ion-col size="3" class="ion-padding">
+        <ion-list>
+          <ion-item *ngFor="let entry of form">
+            <ion-label>{{entry.val}}</ion-label>
+            <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" class="ion-padding">
+        <ion-button  type="button" class="ion-margin" fill="outline">Bekor qilish</ion-button>
+        <ion-button  type="submit" class="ion-margin">Qo'shish</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tables</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <!-- Theme classes dark, material, bootstrap -->
+    <ngx-datatable 
+      class="material"
+      [limit]="8" 
+      [rows]="rows" 
+      [rowHeight]="100" 
+      [columns]="columns"
+      [columnMode]="'force'" 
+      [sortType]="" 
+      [headerHeight]="50" 
+      [footerHeight]="50">
+       <ngx-datatable-column name="ism">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Ismi</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="fani">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Fani</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="du">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Du</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="se">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Se</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="ch">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Ch</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="pa">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Pa</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="ju">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Ju</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="sha">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Sha</span>
+        </ng-template>
+       </ngx-datatable-column>
+       <ngx-datatable-column name="ya">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          <span>Ya</span>
+        </ng-template>
+       </ngx-datatable-column>
+    </ngx-datatable>
+
+  </div>
+</ion-content>

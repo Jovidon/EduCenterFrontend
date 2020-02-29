@@ -35,20 +35,30 @@ export class AppComponent implements OnInit {
       icon: 'people'
     },
     {
-      title: 'Jadval',
-      url: '/schedule',
+      title: 'Dars jadvali',
+      url: '/tables',
       icon: 'calendar'
     },
     {
-      title: 'Speakers',
+      title: 'Hisobotlar',
+      url: '/reports',
+      icon: 'document'
+    },
+    {
+      title: 'O\'qituvchilar',
       url: '/speakers',
       icon: 'contacts'
     },
     {
-      title: 'Menu profile',
-      url: '/profile',
-      icon: 'contact'
+      title: 'Sozlamalar',
+      url: '/settings',
+      icon: 'options'
     },
+    {
+      title: 'SignUp',
+      url: '/signup',
+      icon: 'person-add'
+    }
   ];
   loggedIn = false;
   dark = false;

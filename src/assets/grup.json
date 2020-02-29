@@ -1,0 +1,40 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "guruhname": "GURUH#3",
+      "holati": "Oylik",
+      "fannomi": "Matimatika",
+      "shakli": "aktiv",
+      "miqdori": "939999047",
+      "teacher": "Berdiyev Javohir"
+    },
+    {
+      "id": "1",
+      "guruhname": "GURUH#2",
+      "holati": "Oylik",
+      "fannomi": "Ingliz tili",
+      "shakli": "aktiv",
+      "miqdori": "939999047",
+      "teacher": "Amirov Qodir"
+    },
+    {
+      "id": "1",
+      "guruhname": "GURUH#12",
+      "holati": "Oylik",
+      "fannomi": "Matimatika",
+      "shakli": "aktiv",
+      "miqdori": "939999047",
+      "teacher": "Aleksadr Ivanov"
+    },
+    {
+      "id": "1",
+      "guruhname": "GURUH#2",
+      "holati": "Oylik",
+      "fannomi": "Matimatika",
+      "shakli": "aktiv",
+      "miqdori": "939999047",
+      "teacher": "Najmiddin Qudratov"
+    }
+  ]
+}
